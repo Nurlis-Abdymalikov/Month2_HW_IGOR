@@ -15,6 +15,13 @@ person1 = Person("Tanay", "02-10-2009", "doctor", True )
 person2 = Person("Atay", "26-10-2009", "singer", False)
 person3 = Person("Sardar", "22-10-2009", "president", False)
 
+
+
+
 print(person1.introduce())
 print(person2.introduce())
 print(person3.introduce())
+
+
+
+

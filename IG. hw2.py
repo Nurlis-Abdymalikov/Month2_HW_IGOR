@@ -12,11 +12,6 @@ class Person:
                 f" my highest education is {self.higher_education},")
 
 
-
-
-
-
-
 class Classmate(Person):
     def __init__(self, name: str, birth_date: str, occupation: str, higher_education: bool, group_name: str):
         super().__init__(name, birth_date, occupation, higher_education)

@@ -5,12 +5,17 @@ class Person:
         self.occupation = occupation
         self.higher_education = higher_education
 
+
+
     def introduce(self):
+        if self.higher_education:
+            higher_education = "I have higher education"
+        else:
+            higher_education = "I dont have higher education"
         return (f"HI, my name is {self.name},"
                 f"I was born on {self.birth_date},"
                 f" my profession is {self.occupation},"
-                f" my highest education is {self.higher_education},")
-
+                f" {higher_education},")
 
 class Classmate(Person):
     def __init__(self, name: str, birth_date: str, occupation: str, higher_education: bool, group_name: str):
@@ -18,8 +23,7 @@ class Classmate(Person):
         self.group_name = group_name
 
     def introduce(self):
-        base_text =super().introduce()
-        return base_text + f"group_name {self.group_name}"
+        return super().introduce() + f"group_name {self.group_name}"
 
 class Friend(Person):
     def __init__(self, name: str, birth_date: str, occupation: str, higher_education: bool, hobby: str):
@@ -27,15 +31,14 @@ class Friend(Person):
         self.hobby = hobby
 
     def introduce(self):
-        base_text = super().introduce()
-        return base_text + f" Hobby {self.hobby}"
+        return super().introduce() + f" Hobby {self.hobby}"
 
-classmate1 = Classmate("Iskak", "23-12-2007", "policeman", True, "PhisMath")
-classmate2 = Classmate("Mansur", "5-12-1997", "not", False, "economist")
+classmate1 = Classmate("Iskak", "2007-12-12", "policeman", True, "PhisMath")
+classmate2 = Classmate("Mansur", "1997-10-3", "not", False, "economist")
 
 
-friend1 = Friend("Nava","12-2-2008", "pilot", True, "volleyball")
-friend2 = Friend("Macarov", "07-02-2010", "teacher", False, "football")
+friend1 = Friend("Nava","2008-1-2", "pilot", True, "volleyball")
+friend2 = Friend("Macarov", "2010-2-13", "teacher", False, "football")
 
 # print(classmate1.introduce())
 # print(classmate2.introduce())
